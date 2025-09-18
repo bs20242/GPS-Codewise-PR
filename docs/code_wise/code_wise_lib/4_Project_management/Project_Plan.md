@@ -58,22 +58,41 @@ Deliver an improved CodeWise library by the end of the semester, implementing fu
 
 ## Delivery Group (Roadmap)
 
-**1st Delivery — Local LLM Support via Ollama (First half of the semester)**
--   **Objective:** Implement and document the integration with Ollama.
--   **Acceptance Criteria:** CodeWise runs analyses using a local model selected via `.env` configuration; The installation guide is updated with instructions for Ollama.
+# Deliveries
 
-**2nd Delivery — "Code Mentor" Agent (Second half of the semester)**
--   **Objective:** Implement the new agent for educational suggestions.
--   **Acceptance Criteria:** Pull Request comments include a "Learning Suggestions" section with relevant links; A `history.json` file is created and updated to track recurring errors.
+## 1st Delivery — "Code Mentor" Agent
+
+**Objective:**  
+Implement the new agent for educational suggestions.
+
+**Acceptance Criteria:**  
+- New feature include a "Learning Suggestions" section with relevant links.  
+- A `history.json` file is created and updated to track recurring errors.
+-
+
+---
+
+## 2nd Delivery — Local LLM Support via Ollama
+
+**Objective:**  
+Implement and document the integration with Ollama.
+
+**Acceptance Criteria:**  
+- CodeWise runs analyses using a local model selected via `.env` configuration.  
+- The installation guide is updated with instructions for Ollama.  
+
 
 ## Backlog (Prioritized)
 
-| ID | Feature | Description | Importance | Proposal / Expected Result |
-| -- | ------- | ----------- | ---------- | -------------------------- |
-| 1  | Ollama Integration | Allow the tool to use local LLMs | 100 | Solve privacy/cost issues and enable offline use |
-| 2  | Code Mentor Agent | New agent that suggests learning resources | 95 | Add unique educational value and accelerate developer growth |
-| 3  | Error History (JSON) | Track recurring errors to personalize feedback | 85 | Make the mentor's suggestions more intelligent and targeted |
-| 4  | Refactor for Extensibility | Adapt the architecture in `crew.py` and `cw_runner.py` to easily support the new features | 80 | Ensure the codebase remains clean and modular. |
+# Feature Roadmap
+
+| ID | Feature                | Description                                     | Importance | Proposal / Expected Result                                                |
+|----|------------------------|-------------------------------------------------|------------|---------------------------------------------------------------------------|
+| 1  | Code Mentor Agent      | New agent that suggests learning resources      | 100        | Add unique educational value and accelerate developer growth              |
+| 2  | Error History (JSON)   | Track recurring errors to personalize feedback  | 95         | Make the mentor's suggestions more intelligent and targeted               |
+| 3  | Ollama Integration     | Allow the tool to use local LLMs                | 90         | Solve privacy/cost issues and enable offline use                          |
+| 4  | Refactor for Extensibility | Adapt the architecture in `crew.py` and `cw_runner.py` to easily support the new features | 85         | Ensure the codebase remains clean and modular                           |
+
 
 ## Risks
 -   **Local LLM Performance:** The speed and quality of local models may be a bottleneck compared to the Gemini API.

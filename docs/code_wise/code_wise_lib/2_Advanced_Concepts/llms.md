@@ -12,19 +12,19 @@ CodeWise can be extended to support different LLMs, such as local models running
 
 The first step is to allow the user to choose their LLM provider. This can be done by adding a new variable to the `.env` file:
 
-
+```env
 # Options: "gemini" or "ollama"
 LLM_PROVIDER=ollama
 
 # Specify the local model to be used by Ollama
 OLLAMA_MODEL=llama3
-
+```
 
 ### 2. Modify the AI Core (`codewise_lib/crew.py`)
 
 In the Codewise class constructor, implement a factory logic that instantiates the correct LLM based on the environment variable. CrewAI has native support for Ollama, making this straightforward.
 
-
+```python
 # At the beginning of the file
 from crewai_tools import Ollama
 
@@ -38,7 +38,7 @@ if llm_provider == "ollama":
 else:
     # The existing Gemini LLM instantiation
     self.llm = LLM(model="gemini/gemini-2.0-flash", ...)
-
+```
 
 ### 3. Update the Documentation
 
